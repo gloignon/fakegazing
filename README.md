@@ -1,7 +1,9 @@
 # fakegazing
 Simulated eye tracking recording to test automated analysis methods
 
-We simulated data mimicking the format and some features of a recording produced by the Tobii Pro Glasses 2 mobile eye tracker. The simulated subjective video was produced with PowerPoint software. It consists of 22 slides grouped into eight disturbing events (e.g. sensor hidden by hand). The slides are shown for one second each, forming a video with a total duration of 22 seconds. The visual stimulus appearing in the video imitates an item from a reading comprehension test (i.e. item stem, question, choices).
+We simulated data mimicking the format and some features of a recording produced by the Tobii Pro Glasses 2 mobile eye tracker. The simulated subjective video was produced with PowerPoint software then edited with Gimp. It consists of 22 slides grouped into eight disturbing events (e.g. sensor hidden by hand). The slides are shown for one second each, forming a video with a total duration of 22 seconds. The visual stimulus appearing in the video imitates an item from a reading comprehension test (i.e. item stem, question, choices).
+
+![image](https://user-images.githubusercontent.com/12416756/119512100-04717380-bd41-11eb-8542-69a81a8bb3ff.png)
 
 The video frame rate is 25 frames per second and the format is 1920 by 1080 pixels, which reproduces the specifications of the Tobii Pro 2 camera. The spherical distortion introduced by the camera lens was also emulated; we obtained by trial and error the parameters that minimized the spherical distortion of the camera images, and then applied the inverse transformation to the simulation images. The result mimics the deformation imposed by the Tobii Pro Glasses 2 lens.
 
