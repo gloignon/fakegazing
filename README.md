@@ -1,7 +1,7 @@
 # fakegazing
 Simulated eye tracking recording to test automated analysis methods
 
-We simulated data mimicking the format and some features of a recording produced by the Tobii Pro Glasses 2 mobile eye tracker. The simulated subjective video was produced with PowerPoint software then edited with Gimp. It consists of 22 slides grouped into eight disturbing events (e.g. sensor hidden by hand). The slides are shown for one second each, forming a video with a total duration of 22 seconds. The visual stimulus appearing in the video imitates an item from a reading comprehension test (i.e. item stem, question, choices).
+We simulated data mimicking the format and some features of a recording produced by the Tobii Pro Glasses 2 mobile eye tracker. The simulated subjective video was produced with PowerPoint software then edited with Gimp. The bloom effect and timestamp were added with ffmpeg. The video consists of 22 "slides" grouped into eight perturbation events (e.g. sensor hidden by hand). The slides are shown for one second each, forming a video with a total duration of 22 seconds. The visual stimulus appearing in the video imitates an item from a reading comprehension test (i.e. item stem, question, choices).
 
 ![image](https://user-images.githubusercontent.com/12416756/119512100-04717380-bd41-11eb-8542-69a81a8bb3ff.png)
 
