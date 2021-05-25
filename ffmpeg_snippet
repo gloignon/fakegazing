@@ -1,0 +1,14 @@
+# create video from slides
+ffmpeg -y -framerate 0.2 -i "source_folder/Slide%02d.png" -r 25\
+   -vf "split [a][b];[b] boxblur=1,format=gbrp [b];[b][a] blend=all_mode=screen:shortest=1" \
+     "slide_video.mp4"
+
+## bloom effect only
+ffmpeg -y -i "slide_video.mp4" \
+   -vf "split [a][b];[b] boxblur=2,format=gbrp [b];[b][a] blend=all_mode=screen:shortest=1" \
+     "simul_bloom.mp4"
+
+## timestamp 
+ffmpeg -y -i "simul_bloom.mp4" \
+ -vf "drawtext=fontfile=Arial.ttf: text='%{frame_num}': start_number=0: x=(w-tw)/2: y=h-(2*lh): fontcolor=black: fontsize=20: box=1: boxcolor=yellow: boxborderw=5" \
+ -c:a copy "simul_25fps_fx_ts.mp4"
